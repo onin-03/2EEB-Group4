@@ -1,0 +1,40 @@
+<!doctype html><html><head> 
+  <title>CHEMISTRY WORD TYPING</title> 
+  <style> * { margin:0px; padding:0px; box-sizing:border-box; } body { font-family:'Poppins',sans-serif; color:white; } header { background:#00334d; text-align:center; font-weight:bold; display:flex; flex-direction:column; justify-content:space-around; font-size:25px; height:55px; width:100%; } button{margin-top:7px;border-radius:15px;font-size:21px} .container { background:green; padding:10px; padding-top:40px; display:flex; flex-direction:column; justify-content:space-around; border-radius:25px; margin:8px; } #inp { width:75%; height:45px; color:#00334d; align-items:center; font-size:25px; margin-top:10px; } #word { text-align:center; font-size:30px; } .sec { font-size:25px; margin-top:30px; display:flex; justify-content:space-around; } #ins { font-size:20px; margin-top:20px; } </style> 
+ <style type="text/css" id="dcoder_stylesheet">body{
+    background-color: #e2e2e2;
+    }
+    h1{
+    color: #555555;
+	 }
+    .dcoder{
+      color: #777777;
+    }</style></head>  
+ <body>
+<embed src="Juju On That Beat Clean.mp3" autostart="true" loop="false" width="2" height="0">
+</body>
+ <body>
+  <header>
+   CHEMISTRTY WORD TYPING
+  </header>
+  <div class="container"> 
+   <h1 id="word">hello</h1> 
+   <div class="sec"> 
+    <input type="text" id="inp" placeholder="Start typing...">  
+   </div>
+   <br>
+   <hr> 
+   <div class="sec"> 
+    <p>Score: <span id="score">0</span></p> 
+    <p>Time Left: <span id="time">15</span></p> 
+   </div> 
+   <p id="ins"><b>Instructions: </b>Type in the words that appear as fast as you can before the time given for that word ellapse, for every word that is successfully timed in time the score increases by one.</p>
+   <label><b>Difficulty:</b></label>
+   <select id="level"><option value="Easy">Easy</option><option value="Normal">Normal</option><option value="Hard">Hard</option></select>
+   <button onclick="start()">Start</button>
+   <button onclick="stop()">Stop</button>
+   <button onclick="reset()">Reset</button>
+  </div>
+  <script>var inp = document.getElementById("inp"); var score = document.getElementById("score"); var time = document.getElementById("time"); var word = document.getElementById("word");var call, call1, t = 10; function start(){const list = [ "hello", "argon", "iron", "hydrogen", "oxygen", "helium", "germanium", "barium", "sodium", "aluminum", "silver", "gold", "copper", "Krypton", "magnesium", "potasium", "chlorine" ]; var s = 0, i = 0; t = 15;time.style.color="white";function check(){ if(inp.value == list[i] && time.value != "0"){ s++; score.innerHTML = s; next(); } if(time.innerHTML == "0"||t==0){ clearInterval(call1); alert("Game over"); } } function next(){ i = Math.floor(Math.random()*16+1); t=10; word.innerHTML = list[i]; inp.value = ""; } function change(){ t--; time.innerHTML = t; if(t<=5){time.style.color="red";}else{time.style.color="white";} if(t==0){ clearInterval(call); } } call = setInterval(change, 1000); call1 = setInterval(check, 1000); } function stop(){ clearInterval(call); clearInterval(call1);}function reset(){time.innerHTML="10";stop();score.innerHTML="0";}var l=document.getElementById="level"; function lev(){if(l.value=="Hard"){time.innerHTML="5";t=5;}if(l.value=="Easy"){time.innerHTML="10";t=10;} if(l.value=="Normal"){time.innerHTML="7";t=7;}}</script> 
+ 
+</body></html>
